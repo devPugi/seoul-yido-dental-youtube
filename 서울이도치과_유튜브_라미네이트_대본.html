@@ -1,0 +1,271 @@
+<title>서울이도치과 라미네이트 심미치료 영상 대본</title>
+<style>
+  :root{
+    --bg:#FFFCF3; --surface:#FFFFFF; --surface-2:#F3EEDF;
+    --ink:#252422; --ink-soft:#403D39; --ink-faint:#8C8375;
+    --accent:#EA5E28; --accent-ink:#B8441B; --accent-soft:#FBE3D3;
+    --warn:#403D39; --warn-soft:#F3EEDF; --line:#D2C4B1; --shadow:rgba(37,36,34,0.10);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#201F1D; --surface:#2B2A26; --surface-2:#403D39;
+      --ink:#FFFCF3; --ink-soft:#CCC5B9; --ink-faint:#918A7C;
+      --accent:#F1774A; --accent-ink:#FFD9C4; --accent-soft:#43291B;
+      --warn:#CCC5B9; --warn-soft:#3A3733; --line:#4A4640; --shadow:rgba(0,0,0,0.5);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#201F1D; --surface:#2B2A26; --surface-2:#403D39;
+    --ink:#FFFCF3; --ink-soft:#CCC5B9; --ink-faint:#918A7C;
+    --accent:#F1774A; --accent-ink:#FFD9C4; --accent-soft:#43291B;
+    --warn:#CCC5B9; --warn-soft:#3A3733; --line:#4A4640; --shadow:rgba(0,0,0,0.5);
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Malgun Gothic','Apple SD Gothic Neo',sans-serif;
+    -webkit-font-smoothing:antialiased; line-height:1.7;
+  }
+  .mono{ font-family:ui-monospace,'SF Mono','Cascadia Mono','Consolas','Roboto Mono',monospace; }
+  h1,h2,h3{ text-wrap:balance; margin:0; }
+  p{ margin:0; }
+  .page{ max-width:840px; margin:0 auto; padding:56px 24px 96px; }
+
+  .masthead{ padding-bottom:32px; border-bottom:1px solid var(--line); }
+  .eyebrow-row{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:18px; }
+  .tag{ font-size:0.72rem; letter-spacing:0.08em; padding:5px 10px; border:1px solid var(--line); border-radius:3px; color:var(--ink-soft); white-space:nowrap; }
+  .tag.accent{ border-color:var(--accent); color:var(--accent-ink); background:var(--accent-soft); }
+  .doc-title{ font-size:clamp(1.5rem,1.1rem + 2vw,2.2rem); font-weight:700; letter-spacing:-0.01em; }
+  .doc-subtitle{ margin-top:10px; font-size:1.02rem; color:var(--ink-soft); }
+  .meta-strip{ margin-top:22px; display:flex; flex-wrap:wrap; gap:6px 0; font-size:0.8rem; color:var(--ink-faint); }
+  .meta-strip span{ padding:0 10px; }
+  .meta-strip span:first-child{ padding-left:0; }
+  .meta-strip span + span{ border-left:1px solid var(--line); }
+
+  .note-box{ margin-top:24px; border:1px solid var(--line); border-radius:6px; padding:16px 20px; background:var(--surface); }
+  .note-box .note-tag{ display:inline-block; font-size:0.7rem; letter-spacing:0.05em; color:var(--ink-soft); border:1px solid var(--line); border-radius:3px; padding:2px 9px; margin-bottom:10px; }
+  .note-box p{ font-size:0.88rem; color:var(--ink-soft); }
+  .note-box p + p{ margin-top:8px; }
+
+  .index-nav{ display:flex; flex-wrap:wrap; gap:8px; margin:28px 0 48px; }
+  .index-nav a{ font-size:0.78rem; color:var(--ink-soft); text-decoration:none; padding:7px 12px; border:1px solid var(--line); border-radius:999px; transition:border-color .15s ease, color .15s ease; }
+  .index-nav a:hover, .index-nav a:focus-visible{ border-color:var(--accent); color:var(--accent-ink); outline:none; }
+  .index-nav .num{ color:var(--ink-faint); margin-right:6px; }
+
+  section{ padding:48px 0; border-bottom:1px solid var(--line); scroll-margin-top:24px; }
+  section:last-of-type{ border-bottom:none; }
+  .section-head{ display:flex; align-items:baseline; gap:14px; margin-bottom:6px; flex-wrap:wrap; }
+  .section-num{ font-size:0.8rem; color:var(--accent-ink); background:var(--accent-soft); border-radius:3px; padding:2px 8px; flex:none; }
+  .section-head h2{ font-size:1.3rem; font-weight:700; }
+  .section-time{ font-size:0.8rem; color:var(--ink-faint); }
+  .section-lede{ margin:18px 0 8px; font-size:0.85rem; color:var(--ink-faint); }
+
+  .beat{ display:grid; grid-template-columns:104px 1fr; gap:16px; padding:12px 0; border-top:1px solid var(--line); }
+  .beat:first-of-type{ border-top:none; }
+  .beat .kind{ font-size:0.68rem; letter-spacing:0.05em; text-transform:uppercase; color:var(--ink-faint); padding-top:3px; }
+  .beat.scene .content{ color:var(--ink-soft); font-style:italic; font-size:0.94rem; }
+  .beat.cue .kind{ color:var(--accent-ink); }
+  .beat.cue .content{ color:var(--ink-soft); font-size:0.94rem; }
+  .beat.dialogue .kind{ color:var(--ink); font-weight:700; font-style:normal; text-transform:none; letter-spacing:0; font-size:0.82rem; }
+  .beat.dialogue .content{ color:var(--ink); font-size:1rem; }
+  .beat.dialogue .content::before{ content:"\201C"; color:var(--ink-faint); }
+  .beat.dialogue .content::after{ content:"\201D"; color:var(--ink-faint); }
+  .beat.question .kind{ color:var(--ink-faint); }
+  .beat.question .content{ color:var(--ink-soft); font-style:italic; font-size:0.94rem; }
+  .beat .content .paren{ color:var(--ink-faint); font-style:italic; }
+
+  .table-wrap{ overflow-x:auto; }
+  table{ width:100%; border-collapse:collapse; font-size:0.92rem; min-width:480px; }
+  thead th{ text-align:left; font-size:0.72rem; letter-spacing:0.06em; color:var(--ink-faint); text-transform:uppercase; font-weight:600; padding:0 16px 10px 0; border-bottom:1px solid var(--line); }
+  tbody td{ padding:14px 16px 14px 0; border-bottom:1px solid var(--line); color:var(--ink); vertical-align:top; }
+  td.bad{ color:var(--ink-faint); text-decoration:line-through; text-decoration-color:var(--line); }
+  td.good{ color:var(--accent-ink); }
+  .foot-note{ margin-top:16px; font-size:0.88rem; color:var(--ink-soft); }
+  .foot-note li{ margin-top:6px; }
+
+  .checklist{ display:flex; flex-direction:column; }
+  .check-item{ display:grid; grid-template-columns:28px 1fr; gap:14px; padding:14px 0; border-top:1px solid var(--line); align-items:start; }
+  .check-item:last-child{ border-bottom:1px solid var(--line); }
+  .check-box{ width:16px; height:16px; border:1.5px solid var(--ink-faint); border-radius:3px; margin-top:3px; }
+  .check-item p{ color:var(--ink); }
+  .check-item .idx{ font-size:0.75rem; color:var(--ink-faint); display:block; margin-bottom:3px; }
+
+  .doc-footer{ margin-top:64px; padding-top:24px; border-top:1px solid var(--line); font-size:0.78rem; color:var(--ink-faint); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; }
+  a{ color:var(--accent-ink); }
+  a:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+
+  @media (max-width:560px){ .beat{ grid-template-columns:1fr; } .beat .kind{ padding-top:0; } }
+</style>
+
+<div class="page">
+
+  <header class="masthead">
+    <div class="eyebrow-row">
+      <span class="tag accent">SHOOTING SCRIPT · EP.2</span>
+      <span class="tag">치료 과정 유튜브 영상</span>
+      <span class="tag">환자 익명 · 의료진 실명 공개</span>
+    </div>
+    <h1 class="doc-title">인생네컷에서 항상 입을 가렸던 이유,<br>라미네이트로 바꿨습니다</h1>
+    <p class="doc-subtitle">서울이도치과 유튜브 영상 대본 (가제) — 라미네이트 심미치료 영상 · 시리즈 2편</p>
+    <div class="meta-strip mono">
+      <span>러닝타임 · 본편 약 10분</span>
+      <span>출연 · 박지현 원장(실명 공개) / 지우 씨(가명, 전 구간 모자이크)</span>
+      <span>표기 · 환자는 자막·호칭 모두 "지우 씨(가명)"로 통일</span>
+    </div>
+    <div class="note-box">
+      <span class="note-tag mono">제작 노트</span>
+      <p>인터뷰 답변은 가이드용 예시 대사입니다. 실제 촬영 시 출연자의 자연스러운 표현을 우선하고, 대본은 방향을 잡는 용도로 사용합니다.</p>
+      <p>진료 대화는 실제 상담 흐름대로 진행하되, 핵심 설명 포인트가 빠지지 않도록 박지현 원장님이 <a href="#appendix-a">체크리스트(부록 A)</a>로 활용합니다.</p>
+    </div>
+  </header>
+
+  <nav class="index-nav">
+    <a href="#seq1"><span class="num mono">01</span>오프닝 &amp; 사연 인터뷰</a>
+    <a href="#seq2"><span class="num mono">02</span>진단</a>
+    <a href="#seq3"><span class="num mono">03</span>치료 과정</a>
+    <a href="#seq4"><span class="num mono">04</span>기공 과정</a>
+    <a href="#seq5"><span class="num mono">05</span>세팅 &amp; 엔딩</a>
+    <a href="#appendix-a"><span class="num mono">A</span>설명 체크리스트</a>
+    <a href="#appendix-b"><span class="num mono">B</span>표현 수위 가이드</a>
+    <a href="#appendix-c"><span class="num mono">C</span>익명성 체크</a>
+  </nav>
+
+  <main>
+
+    <section id="seq1">
+      <div class="section-head"><span class="section-num mono">SEQ 1</span><h2>오프닝 &amp; 사연 인터뷰</h2><span class="section-time mono">0:00 – 1:30</span></div>
+
+      <div class="beat scene"><span class="kind">지문</span><p class="content">콜드 오픈 — 상담실, 정면 인터뷰 구도. 얼굴 모자이크</p></div>
+      <div class="beat dialogue"><span class="kind">지우</span><p class="content">저는… 사진 찍을 때마다 손으로 입을 가려요.</p></div>
+      <div class="beat cue"><span class="kind">자막</span><p class="content">그냥 습관 아니었어요?</p></div>
+      <div class="beat cue"><span class="kind">타이틀 인서트</span><p class="content">인생네컷에서 항상 입을 가렸던 이유</p></div>
+      <div class="beat scene"><span class="kind">지문</span><p class="content">인터뷰 계속 — 질문은 자막 처리, 답변만 사용</p></div>
+      <div class="beat question"><span class="kind">Q</span><p class="content">언제부터 그러셨나요?</p></div>
+      <div class="beat dialogue"><span class="kind">지우</span><p class="content">학생 때부터요. 앞니 두 개가 짝짝이처럼 삐뚤고 색도 유독 하나만 누랬어요. 사진 찍을 때 저도 모르게 손이 올라가요.</p></div>
+      <div class="beat cue"><span class="kind">인서트</span><p class="content">스마트폰 사진첩·포토부스 사진 속, 손으로 입을 가린 컷들을 넘겨보는 화면. 잔잔한 BGM.</p></div>
+      <div class="beat question"><span class="kind">Q</span><p class="content">교정은 생각 안 해보셨나요?</p></div>
+      <div class="beat dialogue"><span class="kind">지우</span><p class="content">알아보긴 했는데 2년 넘게 걸린다고 해서… 그 시간을 버틸 자신이 없었어요.</p></div>
+      <div class="beat question"><span class="kind">Q</span><p class="content">그래서 어떤 선택을 하셨나요?</p></div>
+      <div class="beat dialogue"><span class="kind">지우</span><p class="content">원장님이 라미네이트도 방법이 될 수 있다고 하셔서요.</p></div>
+      <div class="beat cue"><span class="kind">자막</span><p class="content">교정 대신 라미네이트, 정말 괜찮을까? → 화면 전환</p></div>
+    </section>
+
+    <section id="seq2">
+      <div class="section-head"><span class="section-num mono">SEQ 2</span><h2>진단</h2><span class="section-time mono">1:30 – 3:30</span></div>
+
+      <div class="beat scene"><span class="kind">지문</span><p class="content">진료실 — 체어에 앉은 지우(모자이크), 박지현 원장 검진</p></div>
+      <div class="beat dialogue"><span class="kind">박지현 원장</span><p class="content">어디가 제일 신경 쓰이세요?</p></div>
+      <div class="beat dialogue"><span class="kind">지우</span><p class="content">앞니 색이랑 삐뚤어진 정도요.</p></div>
+      <div class="beat scene"><span class="kind">지문</span><p class="content">검진 → 구강 스캔·사진 촬영 몽타주. 자막: "정밀 검진 진행"</p></div>
+      <div class="beat scene"><span class="kind">지문</span><p class="content">모니터 앞 — 진단 설명. 스캔 인서트 + 화살표 그래픽, 디지털 스마일 디자인 시뮬레이션 화면</p></div>
+      <div class="beat dialogue"><span class="kind">박 원장</span><p class="content">여기 앞니 두 개가 미세하게 회전되어 있고, 색도 옆 치아보다 어두워요. 교정으로 배열을 맞추는 방법도 있지만, 라미네이트로 얇은 세라믹 막을 씌워서 형태와 색을 동시에 바꾸는 방법도 있습니다.</p></div>
+      <div class="beat cue"><span class="kind">자막·그래픽</span><p class="content">라미네이트 vs 교정 — 배열이 아니라 겉면의 형태·색을 바꾸는 방식</p></div>
+      <div class="beat dialogue"><span class="kind">박 원장</span><p class="content">다만 라미네이트는 치아 표면을 아주 얇게 삭제해야 하기 때문에, 되돌릴 수 없는 치료라는 점은 꼭 아셔야 해요.</p></div>
+      <div class="beat dialogue"><span class="kind">지우</span><p class="content">그래도 사진 찍을 때 손 안 가리고 싶어서요.</p></div>
+      <div class="beat dialogue"><span class="kind">박 원장</span><p class="content">몇 개까지 하실지, 어떤 형태로 할지 먼저 시뮬레이션해볼게요.</p></div>
+      <div class="beat cue"><span class="kind">자막</span><p class="content">치료 계획: 디지털 스마일 디자인 시뮬레이션 → 삭제 → 임시 라미네이트 → 본 라미네이트 장착</p></div>
+    </section>
+
+    <section id="seq3">
+      <div class="section-head"><span class="section-num mono">SEQ 3</span><h2>치료 과정 — 1차 내원</h2><span class="section-time mono">3:30 – 6:00</span></div>
+
+      <div class="beat scene"><span class="kind">지문</span><p class="content">시술 준비 — 자막: "치료 1일차"</p></div>
+      <div class="beat dialogue"><span class="kind">박 원장</span><p class="content">오늘은 최소한으로만 삭제할 거예요. 라미네이트는 두께가 얇아서 치아를 많이 안 깎아도 돼요.</p></div>
+      <div class="beat scene"><span class="kind">지문</span><p class="content">치아 표면 최소 삭제(프렙) → 구강 클로즈업 위주</p></div>
+      <div class="beat cue"><span class="kind">자막</span><p class="content">0.3mm, 손톱보다 얇게 깎습니다</p></div>
+      <div class="beat scene"><span class="kind">지문</span><p class="content">디지털 스마일 디자인 시뮬레이션 화면 인서트 — 형태 미리보기</p></div>
+      <div class="beat cue"><span class="kind">자막</span><p class="content">라미네이트 개수·형태를 먼저 화면으로 확인합니다</p></div>
+      <div class="beat scene"><span class="kind">지문</span><p class="content">정밀 스캔 → 임시 라미네이트 장착</p></div>
+      <div class="beat dialogue"><span class="kind">박 원장</span><p class="content">임시로 붙여드린 것도 실제와 비슷한 형태예요. 이 상태로 일상 지내보시고 느낌 말씀해주세요.</p></div>
+      <div class="beat scene"><span class="kind">지문</span><p class="content">짧은 인터뷰 컷 — 체어에서</p></div>
+      <div class="beat dialogue"><span class="kind">지우</span><p class="content">이 상태로도 벌써 인상이 달라 보여서 신기해요.</p></div>
+    </section>
+
+    <section id="seq4">
+      <div class="section-head"><span class="section-num mono">SEQ 4</span><h2>기공 과정</h2><span class="section-time mono">6:00 – 8:00</span></div>
+
+      <div class="beat scene"><span class="kind">지문</span><p class="content">장소 전환 — 기공소. 자막: "같은 시간, 기공소에서는"</p></div>
+      <div class="beat dialogue"><span class="kind">내레이션 (성우 or 박 원장 VO)</span><p class="content">스캔 데이터와 디자인이 기공소로 전달됩니다. 라미네이트 여러 장을 한 세트처럼 만드는 과정이 시작됩니다.</p></div>
+      <div class="beat scene"><span class="kind">지문</span><p class="content">CAD 디자인 화면</p></div>
+      <div class="beat cue"><span class="kind">자막</span><p class="content">앞니 6장의 두께와 비율을 하나의 세트로 설계합니다</p></div>
+      <div class="beat scene"><span class="kind">지문</span><p class="content">밀링/빌드업</p></div>
+      <div class="beat cue"><span class="kind">자막</span><p class="content">얇을수록 깨지기 쉬워, 다루는 손끝이 예민해집니다</p></div>
+      <div class="beat scene"><span class="kind">지문</span><p class="content">쉐이드 매칭 — 기공사 손 클로즈업</p></div>
+      <div class="beat cue"><span class="kind">자막</span><p class="content">6장이 따로 놀지 않도록, 같은 톤의 그라데이션을 입힙니다</p></div>
+      <div class="beat dialogue"><span class="kind">내레이션</span><p class="content">낱개가 아니라 한 세트로 보이는 것 — 라미네이트의 완성도는 여기서 갈립니다.</p></div>
+      <div class="beat scene"><span class="kind">지문</span><p class="content">완성된 라미네이트 클로즈업 — 트레이에 정렬된 6장</p></div>
+      <div class="beat cue"><span class="kind">자막</span><p class="content">지우 씨(가명)만을 위한 세트, 완성</p></div>
+    </section>
+
+    <section id="seq5">
+      <div class="section-head"><span class="section-num mono">SEQ 5</span><h2>세팅 &amp; 엔딩</h2><span class="section-time mono">8:00 – 10:00</span></div>
+
+      <div class="beat scene"><span class="kind">지문</span><p class="content">진료실 — 자막: "며칠 후, 치료 2일차"</p></div>
+      <div class="beat dialogue"><span class="kind">박 원장</span><p class="content">라미네이트 나왔어요. 하나씩 맞춰볼게요.</p></div>
+      <div class="beat scene"><span class="kind">지문</span><p class="content">임시 라미네이트 제거 → 개별 가접착 확인 → 최종 접착</p></div>
+      <div class="beat cue"><span class="kind">자막</span><p class="content">색·비율 확인 후 한 장씩 접착</p></div>
+      <div class="beat dialogue"><span class="kind">박 원장</span><p class="content">거울 보실까요?</p></div>
+      <div class="beat scene"><span class="kind">지문</span><p class="content">1차 감정 피크 — 거울 리액션. 입 클로즈업 + 손동작, 목소리로 표현</p></div>
+      <div class="beat dialogue"><span class="kind">지우</span><p class="content">이게… 저 맞아요? 사진 찍을 때 가리던 그 느낌이 아예 없어요.</p></div>
+      <div class="beat dialogue"><span class="kind">박 원장</span><p class="content">옆 치아랑 자연스럽게 이어지죠.</p></div>
+      <div class="beat scene"><span class="kind">지문</span><p class="content">치료 전/후 구강 클로즈업 비교 컷 — 단정 표현 없이 화면으로만</p></div>
+      <div class="beat scene"><span class="kind">지문</span><p class="content">마무리 인터뷰 — 상담실</p></div>
+      <div class="beat question"><span class="kind">Q</span><p class="content">치료 후 뭐가 제일 달라졌나요?</p></div>
+      <div class="beat dialogue"><span class="kind">지우</span><p class="content">사진 찍을 때 이제 손이 안 올라가요. 그게 제일 커요.</p></div>
+      <div class="beat question"><span class="kind">Q</span><p class="content">같은 고민을 하는 분들께 한마디?</p></div>
+      <div class="beat dialogue"><span class="kind">지우</span><p class="content">교정할 시간이 없다고 포기하지 마시고, 다른 방법도 있다는 걸 아셨으면 좋겠어요.</p></div>
+      <div class="beat scene"><span class="kind">지문</span><p class="content">엔딩 회수 — 실제로 포토부스에서 사진을 찍는 모습</p></div>
+      <div class="beat cue"><span class="kind">자막</span><p class="content">이제, 손이 아니라 카메라 앞으로</p></div>
+      <div class="beat scene"><span class="kind">지문</span><p class="content">클로징 — 병원 로고</p></div>
+      <div class="beat dialogue"><span class="kind">박 원장 (VO)</span><p class="content">치료의 결과만큼, 과정도 보여드리고 싶었습니다. 서울이도치과였습니다.</p></div>
+      <div class="beat cue"><span class="kind">자막</span><p class="content">라미네이트는 치아 삭제를 동반하는 비가역적 치료입니다 · 개인차가 있으므로 정확한 진단이 우선입니다</p></div>
+    </section>
+
+    <section id="appendix-a">
+      <div class="section-head"><span class="section-num mono">부록 A</span><h2>박지현 원장 설명 체크리스트 — 진단 씬</h2></div>
+      <p class="section-lede">실제 상담 톤으로 자유롭게 말하되, 아래 포인트가 모두 담기도록 한다.</p>
+      <div class="checklist">
+        <div class="check-item"><span class="check-box" aria-hidden="true"></span><p><span class="idx mono">01</span>라미네이트 vs 교정 차이 설명 (배열 교정이 아니라 겉면 형태·색 개선)</p></div>
+        <div class="check-item"><span class="check-box" aria-hidden="true"></span><p><span class="idx mono">02</span>치아 삭제는 최소량이라도 비가역적이라는 점 고지</p></div>
+        <div class="check-item"><span class="check-box" aria-hidden="true"></span><p><span class="idx mono">03</span>개수·범위 확정 방법 — 디지털 스마일 디자인 시뮬레이션</p></div>
+        <div class="check-item"><span class="check-box" aria-hidden="true"></span><p><span class="idx mono">04</span>치료 계획: 삭제 → 임시 라미네이트 → 본 라미네이트 장착 (내원 2회)</p></div>
+        <div class="check-item"><span class="check-box" aria-hidden="true"></span><p><span class="idx mono">05</span>심미 목표: 인접 치아와의 색조·비율 조화, 세트 전체의 통일감</p></div>
+      </div>
+    </section>
+
+    <section id="appendix-b">
+      <div class="section-head"><span class="section-num mono">부록 B</span><h2>표현 수위 가이드 — 의료광고 심의 대응</h2></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>사용 금지</th><th>대체 표현</th></tr></thead>
+          <tbody>
+            <tr><td class="bad">"교정 안 해도 됩니다"</td><td class="good">"치아 배열이 아닌 형태와 색을 개선하는 방법입니다"</td></tr>
+            <tr><td class="bad">"부작용 없습니다" / "안전합니다"</td><td class="good">"치아 삭제가 동반되는 비가역적 치료로, 사전 상담이 필요합니다"</td></tr>
+            <tr><td class="bad">"평생 안 변색됩니다"</td><td class="good">"관리에 따라 색이 오래 유지될 수 있습니다"</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ul class="foot-note">
+        <li>엔딩 자막에 "치아 삭제를 동반하는 비가역적 치료 · 개인차가 있으므로 정확한 진단이 우선" 고지 필수.</li>
+        <li>비용 언급 없음 유지.</li>
+      </ul>
+    </section>
+
+    <section id="appendix-c">
+      <div class="section-head"><span class="section-num mono">부록 C</span><h2>촬영 시 익명성 체크</h2></div>
+      <div class="checklist">
+        <div class="check-item"><span class="check-box" aria-hidden="true"></span><p><span class="idx mono">01</span>현장에서 환자 호칭은 "지우 님"으로 통일 (실명 호명 금지 — 음성까지 그대로 쓸 경우 대비)</p></div>
+        <div class="check-item"><span class="check-box" aria-hidden="true"></span><p><span class="idx mono">02</span>명찰·차트·모니터의 실명 노출 컷 확인 후 촬영</p></div>
+        <div class="check-item"><span class="check-box" aria-hidden="true"></span><p><span class="idx mono">03</span>손·복장 등으로 특정될 만한 요소(반지, 액세서리 등) 사전 점검</p></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="doc-footer">
+    <span>서울이도치과 유튜브 영상 대본 · 시리즈 2편</span>
+    <span class="mono">v1 · 2026-08-11</span>
+  </footer>
+
+</div>
